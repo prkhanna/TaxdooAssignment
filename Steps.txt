@@ -1,0 +1,12 @@
+For Web Testing
+1) Run the testng.xml file to execute the test cases.
+2) Once all testcases are executed, refresh the "test-output" folder.
+3) You will see "SparkReport-Current Timestamp" folder being generated under "test-output/Reports" folder
+   with the Taxdoo-booking.html file name.
+
+For API testing 
+Execution Steps for API testing 
+1) The Tests result report can be find under report folder.
+2) To generate the report we need newman and newman-reporter-htmlextra as npm dependency installed 
+3) Generated the collection using postman.
+4) Executed them using CLI.
