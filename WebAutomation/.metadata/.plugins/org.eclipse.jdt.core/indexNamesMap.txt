@@ -1,3 +1,0 @@
-INDEX VERSION 1.131
-file:/C:/fdrive/TaxdooTask/WebAutomation/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index
-meta_index
