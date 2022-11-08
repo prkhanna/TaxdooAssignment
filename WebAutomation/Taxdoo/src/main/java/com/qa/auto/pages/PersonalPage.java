@@ -64,9 +64,6 @@ public class PersonalPage {
 	@FindBy(xpath = "//input[@name='vatNo']")
 	public static WebElement vatNo;
 
-	@FindBy(xpath = "//input[@name='vatNo']//parent::div/div/img")
-	public static WebElement checkImg;
-
 	@FindBy(xpath = "//input[@name='email']")
 	public static WebElement email;
 
@@ -93,10 +90,9 @@ public class PersonalPage {
 		misc.elementSendKeys(area, data.get("area").toString());
 		misc.selectByText(country, data.get("country").toString());
 		misc.elementSendKeys(vatNo, data.get("vatNo").toString());
-		// misc.waitElementToBeVisible(checkImg);
 		misc.elementSendKeys(email, data.get("email").toString());
 		misc.elementSendKeys(tel, data.get("tel").toString());
-		misc.hardWait(5000);
+		misc.wait(5000);
 
 	}
 

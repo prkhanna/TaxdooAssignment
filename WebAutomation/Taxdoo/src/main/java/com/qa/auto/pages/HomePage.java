@@ -63,12 +63,19 @@ public class HomePage {
 	public static WebElement premiumPackages;
 
 	@FindBy(xpath = "//label[text()='DATEV Export']")
-	public static WebElement addOns;
+	public static WebElement datev;
 
-	public void acceptCookies() {
-		misc.hardWait(5000);
-		misc.elementClick(acceptButton);
-	}
+	@FindBy(xpath = "//label[contains(text(),'Forma')]")
+	public static WebElement forma;
+
+	@FindBy(xpath = "//label[text()='IOSS Export']")
+	public static WebElement ioss;
+
+	@FindBy(xpath = "//label[text()='OSS Export']")
+	public static WebElement oss;
+
+	@FindBy(xpath = "//label[contains(text(),'VAT returns')]")
+	public static WebElement vatReturns;
 
 	public void choosePackage(String pckg) {
 		switch (pckg) {
@@ -114,13 +121,37 @@ public class HomePage {
 			misc.elementClick(eighthRevenue);
 			break;
 		default:
-			fail("Incorrect montly revenue selected");
+			fail("Incorrect monthly revenue selected");
 		}
 
 	}
 
-	public void addOns() {
-		misc.elementClick(addOns);
+	public void selectedAddOns(String addOns) {
+		switch (addOns) {
+		case ("OSS"):
+			misc.elementClick(oss);
+			break;
+		case ("DATEV"):
+			misc.elementClick(datev);
+			break;
+		case ("Pro Forma"):
+			misc.elementClick(forma);
+			break;
+		case ("IOSS"):
+			misc.elementClick(ioss);
+			break;
+		case ("VAT returns"):
+			misc.elementClick(vatReturns);
+			break;
+		default:
+			fail("Incorrect adds on selected");
+		}
+
+	}
+
+	public void acceptCookies() {
+		misc.wait(2000);
+		misc.elementClick(acceptButton);
 	}
 
 	public void clickNext() {

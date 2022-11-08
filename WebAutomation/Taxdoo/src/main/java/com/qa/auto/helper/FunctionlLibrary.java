@@ -139,12 +139,12 @@ public class FunctionlLibrary {
 	}
 
 	/**
-	 * Hard wait method
+	 * Wait method
 	 * 
 	 * @param browser
 	 * @param waitingTime
 	 */
-	public void hardWait(int waitingTime) {
+	public void wait(int waitingTime) {
 
 		try {
 			Thread.sleep(waitingTime);

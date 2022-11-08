@@ -7,7 +7,7 @@ Feature: Booking Process
     Scenario: Verify the Booking Process
         Given Select the average revenue as "1000"
         And   Select the "professional" package
-        And   Select add the add-ons
+        And   Select 'DATEV' as the add-ons
         When  I click on next button
         Then  I am able to navigate to Personal screen
         When  I fill in the personal details

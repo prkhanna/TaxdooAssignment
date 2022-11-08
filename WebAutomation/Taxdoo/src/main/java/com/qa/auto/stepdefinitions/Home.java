@@ -35,9 +35,9 @@ public class Home {
 		bookingPage.choosePackage(pckg);
 	}
 	
-	@Given("Select add the add-ons")
-	public void selectAddOns() {
-		bookingPage.addOns();;
+	@Given("Select {string} as the add-ons")
+	public void selectAddOns(String addOns) {
+		bookingPage.selectedAddOns(addOns);
 	}
 	
 	@When("I click on next button")

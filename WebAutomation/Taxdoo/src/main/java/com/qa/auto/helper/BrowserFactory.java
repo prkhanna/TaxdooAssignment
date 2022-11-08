@@ -4,6 +4,11 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+/**
+ * Class for setting up Browser
+ * @author Prince Khanna
+ *
+ */
 public class BrowserFactory
 {
 	private WebDriver driver;
